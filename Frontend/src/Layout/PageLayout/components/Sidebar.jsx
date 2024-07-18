@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { CreatePostLogo, InstagramLogo, InstagramMobileLogo, NotificationsLogo, SearchLogo } from '../../../assets/constantPhotos'
 import { FaHome } from "react-icons/fa";
+import { BiLogOut } from "react-icons/bi";
 
 const Sidebar = () => {
     const sidebarItems = [
@@ -61,6 +62,16 @@ const Sidebar = () => {
                         )
                     })}
                 </Flex>
+                <Box as={Link} to={"/"} marginTop={"auto"} display={"flex"} alignItems={"center"} p={2} borderRadius={6} _hover={{ bg: "whiteAlpha.400" }} w={"full"}>
+                    <Tooltip hasArrow label={"Logout"} placement='right' openDelay={500}>
+                        <Box display={"flex"} alignItems={"center"} justifyContent={{ base: "center", md: "flex-start" }} w={10}>
+                            <BiLogOut />
+                        </Box>
+                    </Tooltip>
+                    <Box display={{ base: "none", md: "block" }} ml={4}>
+                        Logout
+                    </Box>
+                </Box>
             </Flex>
         </Box>
     )

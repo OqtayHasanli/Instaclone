@@ -5,8 +5,8 @@ import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <Flex>
-      <PageLayout />
+    <Flex position={"relative"}>
+      <PageLayout  />
       <Box flex={1} w={{base:"calc(100%-70px)",md:"calc(100%-240px)"}}>
         <Outlet />
       </Box>
